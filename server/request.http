@@ -1,0 +1,161 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "lovandu1",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "lovandu1",
+  "password": "123456"
+}
+
+
+
+
+
+###
+
+
+POST http://localhost:5000/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+{
+  "name": "Kem che khuyết điểm BBcream 3 trong 1 Invisible",
+  "image": "https://nerman.com.vn/wp-content/uploads/2021/10/bbcream.jpg",
+  "category":"makeup",
+  "description": "Kem che khuyết điểm BBcream là sản phẩm tích hợp 3 công dụng che khuyết điểm, chống nắng SPF45+, toneup cho phải mạnh. Cải thiện làn da thô ráp, thiếu sức sống cho nam giới.",
+  "price": 239000
+}
+
+###
+
+GET http://localhost:5000/api/products/6370e08831fba81628c81f1e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+###
+
+GET http://localhost:5000/api/products/allproducts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+###
+
+PUT http://localhost:5000/api/products/6370e08831fba81628c81f1e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+{
+  "name": "Kem che khuyết điểm BBcream 3 trong 1 Invisible",
+  "image": "https://nerman.com.vn/wp-content/uploads/2021/10/bbcream.jpg",
+  "category":"makeup",
+  "description": "Kem che khuyết điểm BBcream là sản phẩm tích hợp 3 công dụng che khuyết điểm, chống nắng SPF45+, toneup cho phải mạnh. Cải thiện làn da thô ráp, thiếu sức sống cho nam giới.",
+  "price": 239000,
+  "rating":4,
+  "review":[{
+    "user":"lodu",
+    "review":"san pham rat tot"
+  }]
+}
+###
+
+DELETE  http://localhost:5000/api/products/6370e08831fba81628c81f1e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+###
+
+POST http://localhost:5000/api/carts/6370e657d370ca477386a92b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+
+###
+
+GET http://localhost:5000/api/carts/6370e6ab3a6bc5265f66cd8a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+###
+
+DELETE  http://localhost:5000/api/carts/6370e6ab3a6bc5265f66cd8a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+# order
+###
+
+GET http://localhost:5000/api/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+###
+
+POST http://localhost:5000/api/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+{
+  "userName":"LO DU VAN",
+  "userAddress":"SON LA",
+  "userPhone":"01234567",
+  "paymentMethod":"COD",
+  "productsList":[{
+  "name":"Thit Cuu"
+  }],
+  "status":true
+}
+###
+
+GET http://localhost:5000/api/products/allproducts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRkNThmNGM5ZTU3NzNhZGNkNmVmZTYiLCJpYXQiOjE2NTg4MDM1NDB9.IxyTlW4arPiAEJbJrsyvna8SNyZHsGqlDPoLyJOS6HY
+
+
+###
+GET http://localhost:5000/api/carts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+###
+
+POST http://localhost:5000/api/carts/6370e657d370ca477386a92b
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+
+{
+  "quantity":2
+}
+
+###
+GET http://localhost:5000/api/carts/reset
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzcwYTdhYmI0OGQwMzk4OTg1NjRmOWQiLCJpYXQiOjE2NjgzMzAwOTV9.QT776rMuyWs3CcPiTgXk0vbURD9C_s1cUpGYQ3_SO3I
+###
+
+POST http://localhost:5000/api/carts/62e4f47e14826c302428b7f5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRkNThmNGM5ZTU3NzNhZGNkNmVmZTYiLCJpYXQiOjE2NTk0MzYyNDR9.-rKV-fAAz7hTjH1iard7SB9pnDhnPOQ8awiVZCzkVfw
+
+{
+  "quantity":4
+}
+###
+
+POST http://localhost:5000/api/carts/62ef81c377519e32684a5881
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRkNThmNGM5ZTU3NzNhZGNkNmVmZTYiLCJpYXQiOjE2NTk0MzYyNDR9.-rKV-fAAz7hTjH1iard7SB9pnDhnPOQ8awiVZCzkVfw
+
+{
+  "quantity":2  
+}
+###
+# find products by name
+GET http://localhost:5000/api/products/search/basa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmRkNThmNGM5ZTU3NzNhZGNkNmVmZTYiLCJpYXQiOjE2NTk0MzYyNDR9.-rKV-fAAz7hTjH1iard7SB9pnDhnPOQ8awiVZCzkVfw
